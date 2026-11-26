@@ -6,6 +6,8 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // GitHub Pages serves this project from /minecarft0/, not the domain root.
+    base: '/minecarft0/',
     plugins: [
       react(),
       tailwindcss(),
