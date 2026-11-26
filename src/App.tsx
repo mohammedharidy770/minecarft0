@@ -11,7 +11,7 @@ export default function App() {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       {!loaded && <LoadingScreen onComplete={() => setLoaded(true)} />}
       <CustomCursor />
       <div className="min-h-screen bg-[#080D0A] text-[#F4F4ED] flex flex-col">
